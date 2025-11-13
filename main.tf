@@ -2,16 +2,15 @@ terraform {
   required_providers {
     google = {
       source  = "hashicorp/google"
-      version = "~> 6.0"
+      version = ">= 5.0"
     }
   }
-
-  required_version = ">= 1.5.0"
 }
 
 provider "google" {
-  project = var.project_id
-  region  = var.region
+  credentials = base64decode(var.gcp_credentials)
+  project     = var.project_id
+  region      = var.region
 }
 
 # Create a VPC network
