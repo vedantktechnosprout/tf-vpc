@@ -3,6 +3,12 @@ variable "project_id" {
   type        = string
 }
 
+variable "gcp_credentials" {
+  description = "Base64-encoded GCP service account key"
+  type        = string
+  sensitive   = true
+}
+
 variable "region" {
   description = "The region to deploy resources in"
   type        = string
