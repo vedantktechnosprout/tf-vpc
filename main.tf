@@ -17,7 +17,7 @@ provider "google" {
 resource "google_compute_network" "main_vpc" {
   name                    = var.vpc_name
   auto_create_subnetworks = false
-  description             = "Custom VPC network created with Terraform"
+  description             = "Custom VPC network created with Terraform Ent"
 }
 
 # Create a subnet inside the VPC
